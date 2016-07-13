@@ -5,7 +5,7 @@ from PIL import ImageDraw
 img = Image.new("RGB", (512, 512), "red")
 draw = ImageDraw.Draw(img)
 # font = ImageFont.truetype(<font-file>, <font-size>)
-# font = ImageFont.truetype("sans-serif.ttf", 16)
+#font = ImageFont.truetype("sans-serif.ttf", 16)
 text_options = {
     'fill': (255, 255, 255)
 }

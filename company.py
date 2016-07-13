@@ -24,3 +24,4 @@ class Company:
             b += eval('0x' + hex_num[3] + hex_num[3])
 
         return (round(r/len(all_colors)), round(g/len(all_colors)), round(b/len(all_colors)))
+

@@ -2,7 +2,7 @@ import connect_to_db
 from company import Company
 
 # establish connection to database with 1. database name, 2. password
-cursor = connect_to_db.make_connection('krs', '#3porcI.')
+cursor = connect_to_db.make_connection('levente', 'postgres')
 
 # chose an option which picture to generate
 option = input('Press key 1, 2, 3 or 4 to select an option: ')
