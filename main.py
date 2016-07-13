@@ -1,5 +1,6 @@
 import connect_to_db
 from company import Company
+import image_generator
 
 # establish connection to database with 1. database name, 2. password
 cursor = connect_to_db.make_connection('krs', '#3porcI.')
@@ -15,6 +16,10 @@ if option == '1':
 
     # save each row of the extracted data as an instance in a list
     objects_to_print = [Company(row) for row in cursor.fetchall()]
+
+    # make an image from the instances
+    image_generator.generate_imgage(objects_to_print)
+
     # print(objects_to_print[15].name, objects_to_print[15].color, objects_to_print[15].project_num)
 
 else:
