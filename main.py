@@ -18,7 +18,7 @@ if option == '1':
     objects_to_print = [Company(row) for row in cursor.fetchall()]
 
     # make an image from the instances
-    image_generator.generate_imgage(objects_to_print)
+    image_generator.generate_image(objects_to_print)
 
     # print(objects_to_print[15].name, objects_to_print[15].color, objects_to_print[15].project_num)
 

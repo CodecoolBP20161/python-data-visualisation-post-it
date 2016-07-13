@@ -6,10 +6,10 @@ class Company:
         self.color = self.average_color(sql_output[1])
         self.size = sql_output[2]*10
 
-
-    def average_color(self, all_colors):
+    @staticmethod
+    def average_color(all_colors):
         # convert a string of colours to a list of colour strings (give default colour white if none)
-        if all_colors != None:
+        if all_colors is not None:
             all_colors = all_colors.split(',')
         else:
             all_colors = ['#FFF']
@@ -24,5 +24,4 @@ class Company:
             g += eval('0x' + hex_num[2] + hex_num[2])
             b += eval('0x' + hex_num[3] + hex_num[3])
 
-        return (round(r/len(all_colors)), round(g/len(all_colors)), round(b/len(all_colors)))
-
+        return round(r/len(all_colors)), round(g/len(all_colors)), round(b/len(all_colors))
