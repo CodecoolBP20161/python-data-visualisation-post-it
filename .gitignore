@@ -103,3 +103,6 @@ ENV/
 sample-out.png
 .idea
 *.png
+
+# Role name and password to access database
+.secret.txt
