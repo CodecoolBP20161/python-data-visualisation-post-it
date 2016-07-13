@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
-from main import company_list
+from main import objects_to_print
 import random
 
 img = Image.new("RGB", (640, 640), "black")
@@ -10,13 +10,13 @@ font_library = "/usr/share/fonts/truetype/freefont/FreeSerif.ttf"
 # font = ImageFont.truetype(<font-file>, <font-size>)
 
 
-for i in range(len(company_list)):
+for i in range(len(objects_to_print)):
     # select tag size
-    font = ImageFont.truetype(font_library, 10*company_list[i].project_num)
+    font = ImageFont.truetype(font_library, objects_to_print[i].size)
     # select tag colour
-    text_options = {'fill': company_list[i].color}
+    text_options = {'fill': objects_to_print[i].color}
     # select tag text
-    text_content = company_list[i].name
+    text_content = objects_to_print[i].name
     # save the size of text in pixels
     text_size = draw.textsize(text_content)
     # draw.text((x, y),text_content,(r,g,b))

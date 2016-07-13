@@ -14,8 +14,8 @@ if option == '1':
                       GROUP BY company_name;""")
 
     # save each row of the extracted data as an instance in a list
-    company_list = [Company(row) for row in cursor.fetchall()]
-    print(company_list[15].name, company_list[15].color, company_list[15].project_num)
+    objects_to_print = [Company(row) for row in cursor.fetchall()]
+    # print(objects_to_print[15].name, objects_to_print[15].color, objects_to_print[15].project_num)
 
 else:
     print('You should choose option 1 for now, the others are not implemented yet')
