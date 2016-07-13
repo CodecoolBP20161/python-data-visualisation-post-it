@@ -1,7 +1,7 @@
 import psycopg2
 
 
-def connect_to_db(db_name, passwd):
+def make_connection(db_name, passwd):
     try:
         # setup connection string
         connect_str = "dbname={0} user={0} host='localhost' password={1}".format(db_name, passwd)
@@ -15,3 +15,4 @@ def connect_to_db(db_name, passwd):
     except Exception as e:
         print("Uh oh, can't connect. Invalid dbname, user or password?")
         print(e)
+
