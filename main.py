@@ -1,8 +1,9 @@
 import connect_to_db
 from company import Company
+from project import Project
 import image_generator
 
-# establish connection to database with 1. database name, 2. password
+# establish connection to database
 cursor = connect_to_db.make_connection()
 
 # chose an option which picture to generate
@@ -20,7 +21,14 @@ if option == '1':
     # make an image from the instances
     image_generator.generate_image(objects_to_print)
 
-    # print(objects_to_print[15].name, objects_to_print[15].color, objects_to_print[15].project_num)
+if option == '2':
+    cursor.execute("""SELECT name, main_color, budget_value, budget_currency
+                      FROM project
+                      WHERE name LIKE '_%';""")
+
+    objects_to_print = [Project(row) for row in cursor.fetchall()]
+
+    image_generator.generate_image(objects_to_print)
 
 else:
     print('You should choose option 1 for now, the others are not implemented yet')
