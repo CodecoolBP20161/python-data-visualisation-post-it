@@ -15,7 +15,7 @@ if option == '1':
 
     # save each row of the extracted data as an instance in a list
     company_list = [Company(row) for row in cursor.fetchall()]
-    print(company_list[1].name, company_list[1].color, company_list[1].project_num)
+    print(company_list[15].name, company_list[15].color, company_list[15].project_num)
 
 else:
     print('You should choose option 1 for now, the others are not implemented yet')
