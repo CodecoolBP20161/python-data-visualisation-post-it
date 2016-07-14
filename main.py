@@ -1,7 +1,9 @@
 import connect_to_db
 from company import Company
 from project import Project
+from status import Status
 import image_generator
+
 
 # establish connection to database
 cursor = connect_to_db.make_connection()
@@ -29,6 +31,13 @@ elif option == '2':
     objects_to_print = [Project(row) for row in cursor.fetchall()]
 
     image_generator.generate_image(objects_to_print)
+elif option == '3':
+    cursor.execute("""SELECT name, main_color, status
+                      FROM project
+                      WHERE name LIKE '_%';""")
 
+    objects_to_print = [Status(row) for row in cursor.fetchall()]
+
+    image_generator.generate_image(objects_to_print)
 else:
     print('You should choose option 1 for now, the others are not implemented yet')
