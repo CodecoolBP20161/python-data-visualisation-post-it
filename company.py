@@ -4,7 +4,7 @@ class Company:
         # sql_output should be a tuple of company name and color codes as one string
         self.name = sql_output[0]
         self.color = self.average_color(sql_output[1])
-        self.size = sql_output[2]*10
+        self.size = sql_output[2]*7
 
     @staticmethod
     def average_color(all_colors):

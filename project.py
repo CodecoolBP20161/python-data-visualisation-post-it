@@ -3,7 +3,7 @@ class Project:
         # sql_output should be a tuple of name, main_color, budget_value, budget_currency
         self.name = sql_output[0]
         self.color = self.to_rgb(sql_output[1])
-        self.size = round(self.to_eur(eval(sql_output[2]), sql_output[3]) * 0.004)
+        self.size = round(self.to_eur(eval(sql_output[2]), sql_output[3]) * 0.002)
 
     @staticmethod
     def to_rgb(color):
