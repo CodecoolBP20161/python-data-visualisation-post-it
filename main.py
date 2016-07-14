@@ -21,7 +21,7 @@ if option == '1':
     # make an image from the instances
     image_generator.generate_image(objects_to_print)
 
-if option == '2':
+elif option == '2':
     cursor.execute("""SELECT name, main_color, budget_value, budget_currency
                       FROM project
                       WHERE name LIKE '_%';""")
