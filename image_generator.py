@@ -37,5 +37,10 @@ def generate_image(objects_to_print):
     img.show()
 
 
+<<<<<<< Updated upstream:image_generator.py
 def get_place():
     return random.randint(0, 555), random.randint(0, 555)
+=======
+#img.save('sample-out.png')
+img.show()
+>>>>>>> Stashed changes:sample-image-generator.py
