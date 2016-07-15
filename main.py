@@ -9,7 +9,7 @@ import image_generator
 cursor = connect_to_db.make_connection()
 
 # chose an option which picture to generate
-option = input('Press key 1, 2, 3 or 4 to select an option: ')
+option = input('Press key 1, 2 or 3 to select an option: ')
 
 if option == '1':
     # get the appropriate data from the database
@@ -40,4 +40,4 @@ elif option == '3':
 
     image_generator.generate_image(objects_to_print)
 else:
-    print('You should choose option 1 for now, the others are not implemented yet')
+    print('You should choose option 1, 2 or 3!')
