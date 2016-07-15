@@ -32,7 +32,7 @@ elif option == '2':
 
     image_generator.generate_image(objects_to_print)
 elif option == '3':
-    cursor.execute("""SELECT name, main_color, status
+    cursor.execute("""SELECT name, status
                       FROM project
                       WHERE name LIKE '_%';""")
 
